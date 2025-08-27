@@ -1,120 +1,65 @@
-import { Box, Typography, Grid, Container } from "@mui/material"
+import React from 'react';
 
 const RuchiraAchievementsSection = () => {
     return (
-        <Container maxWidth="lg" sx={{ py: 8 }}>
-            <Grid container spacing={4} alignItems="center">
+        <div className="max-w-7xl mx-auto py-16 px-4 md:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between ">
                 {/* Left side - Text content */}
-                <Grid item xs={12} md={6} maxWidth={"700px"} justifyContent={"space-between"}>
-                    <Box sx={{ pr: { md: 4 } }}>
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: "16px",
-                                lineHeight: 1.8,
-                                color: "#333",
-                                mb: 3,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                            }}
-                        >
-                            She has fiercely led her team to establish Lokmat MahaMarathon as the most sought after running brand in
-                            the state of Maharashtra.
-                        </Typography>
+                <div className="max-w-2xl lg:pr-8 md:max-w-[550px]">
+                    <p 
+                        className="text-sm md:text-base leading-relaxed text-shadow-md mb-6 font-[500] poppins"
+                    >
+                        She has fiercely led her team to establish Lokmat MahaMarathon as the most sought after running brand in
+                        the state of Maharashtra.
+                    </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: "16px",
-                                lineHeight: 1.8,
-                                color: "#333",
-                                mb: 3,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                            }}
-                        >
-                            With the event now being conducted in every major city of Maharashtra including Maha Mumbai, Nashik,
-                            Aurangabad, Nagpur, Kolahpur and Pune.
-                        </Typography>
+                    <p 
+                        className="text-sm md:text-base leading-relaxed text-shadow-md mb-6 font-[500] poppins"
+                    >
+                        With the event now being conducted in every major city of Maharashtra including Maha Mumbai, Nashik,
+                        Aurangabad, Nagpur, Kolahpur and Pune.
+                    </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: "16px",
-                                lineHeight: 1.8,
-                                color: "#333",
-                                mb: 3,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                            }}
-                        >
-                            Her brand Lokmat Campus Club recently made the Asia Book of Records for maximum children drawing on a
-                            single day with 4.75 Lakh children in over 1000 schools participating in 35 districts of Maharashtra and
-                            Goa.
-                        </Typography>
+                    <p 
+                        className="text-sm md:text-base leading-relaxed text-shadow-md mb-6 font-[500] poppins"
+                    >
+                        Her brand Lokmat Campus Club recently made the Asia Book of Records for maximum children drawing on a
+                        single day with 4.75 Lakh children in over 1000 schools participating in 35 districts of Maharashtra and
+                        Goa.
+                    </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: "16px",
-                                lineHeight: 1.8,
-                                color: "#333",
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                            }}
-                        >
-                            Ruchira is a multi-talented, visionary and a fierce leader and entrepreneur, who never fails to inspire
-                            the best in her audience,be it her colleagues,the business community or the youth.
-                        </Typography>
-                    </Box>
-                </Grid>
+                    <p 
+                        className="text-sm md:text-base leading-relaxed text-shadow-md mb-6 font-[500] poppins"
+                    >
+                        Ruchira is a multi-talented, visionary and a fierce leader and entrepreneur, who never fails to inspire
+                        the best in her audience,be it her colleagues,the business community or the youth.
+                    </p>
+                </div>
 
                 {/* Right side - Image with golden background */}
-                <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            position: "relative",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            left: { xs: 0, md: "80px" },
-                        }}
-                    >
-                        {/* Golden curved background */}
-                        <Box
-                            sx={{
-                                position: "absolute",
-                                width: " 25.9375rem",
-                                height: "29.1875rem",
-                                background: "#f1cf87",
-                                borderRadius: "60px",
-                                zIndex: 1,
-                                right: { xs: 0, md: "-20px" },
-                                top: "20px",
-                            }}
-                        />
+                <div className="relative flex justify-center md:justify-center items-center ">
+                    {/* Golden curved background */}
+                    <div 
+                        className="md:absolute md:mr-20 w-70 h-78 mr-4 md:mr-0   z-10 bg-[#f1cf87] absolute right-[-20px] top-5  rounded-[80px] md:w-90 md:h-100"
+                    />
 
-                        {/* Profile image */}
-                        <Box
-                            component="img"
-                            src="/images/image-266.png"
-                            alt="Ruchira at her office desk"
-                            sx={{
-                                width: " 25.9375rem",
-                                height: "29.1875rem",
-                                borderRadius: "40px",
-                                zIndex: 2,
-                                position: "relative",
-                                right: { xs: 0, md: "22px" },
-                                bottom: { xs: 0, md: "20px" },
-                                objectFit: "cover",
-                            }}
-                        />
-                    </Box>
-                </Grid>
-            </Grid>
-        </Container>
-    )
-}
+                    {/* Profile image */}
+                    <img
+                        src="/images/image-266.png"
+                        alt="Ruchira at her office desk"
+                        className="relative z-20 object-cover w-70 h-78 md:w-90 md:h-100 rounded-2xl absolute right-6 bottom-5"
+                        // style={{
+                        //     width: '25.9375rem',
+                        //     height: '29.1875rem',
+                        //     borderRadius: '40px',
+                        //     right: '22px',
+                        //     bottom: '20px'
+                        // }}
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
 
-export default RuchiraAchievementsSection
+export default RuchiraAchievementsSection;

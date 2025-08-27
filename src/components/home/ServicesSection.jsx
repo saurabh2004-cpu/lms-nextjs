@@ -77,9 +77,9 @@ const OurServices = () => {
                             <div className="relative bg-white rounded-t-3xl overflow-hidden md:min-h-[276px] md:min-w-[403px]" >
                                 {/* Background Card with Text */}
                                 <div
-                                    className=" bg-[#D6B56D] relative max-w-2/3 md:top-12 md:left-15  h-44 rounded-2xl flex flex-col justify-center px-8 z-10"
+                                    className=" bg-[#D6B56D] relative max-w-2/3 left-22 md:top-12 md:left-15  h-44 rounded-2xl flex flex-col justify-center px-8 z-10"
                                 >
-                                    <div className="text-black font-bold text-sm leading-tight poppins w-full relative left-12  ">
+                                    <div className="text-black font-bold text-sm leading-tight poppins w-full relative left-8 md:left-12  ">
                                         <div >Understanding Yourself</div>
                                         <div>By Understanding Others</div>
                                         <div>Exclusively For Teenagers</div>
@@ -96,7 +96,7 @@ const OurServices = () => {
 
                             {/* Card Content */}
                             <div
-                                className="bg-white p-4 border-l border-r border h-[109px] w-[403px]  flex flex-col gap-4"
+                                className="bg-white p-4 border-l border-r border h-[109px] md:w-[403px]  flex flex-col gap-4"
                                 style={{ borderColor: '#f1cf87' }}
                             >
                                 {/* Rating and Price Row */}
@@ -115,8 +115,6 @@ const OurServices = () => {
                                 {/* Buy Course Button */}
                                 <button
                                     className="w-full py-3 px-6 text-black bg-[#f1cf87] text-[16] font-bold manrope rounded-full transition-colors duration-200 hover:opacity-90"
-                                    
-                                    
                                 >
                                     Buy course
                                 </button>

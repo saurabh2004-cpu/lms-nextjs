@@ -21,7 +21,7 @@ const FeaturedIn = () => {
             </h3>
 
             {/* Logos Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-8 justify-items-center items-center px-4 md:px-30">
+            <div className="grid grid-cols-2  md:grid-cols-7 gap-8 justify-items-center items-center px-4 md:px-30">
                 {logos.map((logo, index) => (
                     <div key={index} className="flex justify-center">
                         <img

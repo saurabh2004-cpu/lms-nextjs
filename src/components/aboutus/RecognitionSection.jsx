@@ -1,132 +1,94 @@
-import { Box, Typography, Grid, Container } from "@mui/material"
+import React from 'react';
 
 const LaurelWreath = ({ title, img }) => (
-  <Box
-    sx={{
-      position: "relative",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: 120,
-      height: 120,
-      margin: "0 auto 20px",
-      mt: 10,
-    }}
-  >
-    <Box>
-      <img src={img} alt={title} style={{ width: "10rem%", height: "13.625rem" }} />
-    </Box>
-  </Box>
-)
+  <div className="relative flex items-center justify-center mx-auto mb-3 md:mb-5 mt-6 md:mt-10">
+    <div>
+      <img 
+        src={img}
+        alt={title}
+        className="w-[120px] sm:w-[150px] md:w-[218px] h-auto md:h-[160px]"
+      />
+    </div>
+  </div>
+);
 
 const RecognitionsSection = () => {
   const recognitions = [
     {
       title: "CERTIFIED",
       description:
-        "B.Com LLB, NLP Practitioner, ACC Certified Coach, Certified Sex Educator, Certified Personal Counsellor",
+        "B.Com LLB, NLP Practitioner, ACC Certified Coach, Certified Sex Educator, Certified Personal Counsellor",
       img: "/images/image-260.png",
     },
     {
       title: "AUTHOR",
-      description: "Author of 8 children’s books and a columnist in Lokmat Times.",
+      description: "Author of 8 children's books and a columnist in Lokmat Times.",
       img: "/images/image-261.png",
     },
-
     {
       title: "DIRECTOR",
       description: "Lokmat MahaMarathon Lokmat Campus Club Wider Opportunities for Women",
       img: "/images/image-262.png",
     },
-  ]
+  ];
 
   return (
-    <Box
-      sx={{
-        background: "#383086",
-        padding: { xs: "40px 20px", md: "60px 40px" },
-        width: "100%",
-        margin: "0 auto",
+    <div 
+      className="w-full mx-auto px-3 sm:px-5 md:px-10 py-6 sm:py-8 md:py-10 lg:py-15"
+      style={{
+        backgroundColor: "#383086",
+        height: "auto",
+        minHeight: "32rem",
+        paddingTop: "30px",
+        paddingBottom: "40px"
+      }}
+      // Desktop styles preserved
+      data-desktop-style={{
         height: "40.75rem",
+        paddingTop: "40px",
+        paddingBottom: "60px"
       }}
     >
-      <Container maxWidth="lg">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <Box sx={{ textAlign: "center", marginBottom: "40px" }}>
-          <Typography
-            variant="h4"
-            sx={{
+        <div className="text-center mb-6 md:mb-10">
+          <h4 
+            className="font-medium text-[20px] sm:text-[22px] md:text-[24px] md:font-medium mb-3 md:mb-4 tracking-wider poppins"
+            style={{
               color: "#f1cf87",
-              fontWeight: 500,
-              fontSize: { xs: "24px", md: "24px" },
-              marginBottom: "16px",
-              letterSpacing: "2px",
-              fontFamily: "Poppins, sans-serif",
             }}
           >
             RECOGNITIONS
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: "white",
-              fontSize: { xs: "14px", md: "16px" },
-              lineHeight: 1.6,
-              maxWidth: "530px",
-              fontWeight: 500,
-              margin: "0 auto",
-              textAlign: "center",
-            }}
+          </h4>
+          <p 
+            className="text-white text-xs sm:text-sm md:text-[16px] md:font-medium leading-relaxed max-w-[587px] font-medium mx-auto text-center poppins px-2 md:px-5"
           >
-            Ruchira has coached over several individuals across the world on the Science of Personalities, she not only inspires adults but kids too. She has published over 300 columns along with several children’s books.
-          </Typography>
-        </Box>
+            Ruchira has coached over several individuals across the world on the Science of Personalities, she not only inspires adults but kids too. She has published over 300 columns along with several children's books.
+          </p>
+        </div>
 
         {/* Recognition Cards */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "stretch",
-            gap: 19,
-            flexWrap: "nowrap", 
-            width: "100%",
-          }}
-        >
+        <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 sm:gap-5 md:gap-12 flex-nowrap w-full md:gap-x-10">
           {recognitions.map((recognition, index) => (
-            <Box
+            <div
               key={index}
-              sx={{
-                flex: "1 1 0",
-                textAlign: "center",
-                padding: "20px",
-                minWidth: '30%', // prevents shrinking issues
-                
-              }}
+              className="flex-1 text-center mx-2 sm:mx-6 md:mx-12"
+              style={{ minWidth: 'auto' }}
+              // Desktop style preserved
+              data-desktop-style={{ minWidth: '30%' }}
             >
               <LaurelWreath title={recognition.title} img={recognition.img} />
-              <Typography
-                variant="body2"
-                sx={{
-                  color: "white",
-                  fontSize: { xs: "13px", md: "16px" },
-                  lineHeight: 1.5,
-                  textAlign: "center",
-                  fontWeight: 500,
-                  fontFamily: "Poppins, sans-serif",
-                  mt: 10,
-                  width: "120%",
-                  ml: "-45px",
-                }}
+              <p
+                className="text-white text-[10px] sm:text-xs md:text-[16px] md:font-medium poppins leading-4 sm:leading-5 md:leading-6 text-center font-medium mt-4 sm:mt-6 md:mt-10 px-1 sm:px-2 md:px-0"
               >
                 {recognition.description}
-              </Typography>
-            </Box>
+              </p>
+            </div>
           ))}
-        </Box>
-      </Container>
-    </Box>
-  )
-}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default RecognitionsSection
+export default RecognitionsSection;

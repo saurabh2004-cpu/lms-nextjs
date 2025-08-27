@@ -5,6 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body{
+  overflow-x: hidden;
+}
+
 .poppins {
   font-family: 'Poppins', sans-serif;
 }

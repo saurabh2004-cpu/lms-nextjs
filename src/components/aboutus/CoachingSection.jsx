@@ -1,179 +1,69 @@
-import { Box, Grid, Typography } from "@mui/material"
+import React from 'react';
 
 const CoachingSection = () => {
     return (
-        <Box
-            sx={{
-                width: "100%",
-                margin: "0 auto",
-                padding: { xs: 2, md: 4 },
-            }}
-        >
-            <Grid container spacing={0} sx={{ justifyContent: "center" }}>
-                {/* Left side - Image */}
-                <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            // height: "31.9375rem",
-                            minHeight: { xs: "300px", md: " 23.4375rem" },
-                            width: { xs: "100%", md: " 24.875rem" },
-                            overflow: "hidden",
-                            position: "absolute",
-                            left: { xs: "-16px", md: 170 },
-                            mt: { xs: "0px", md: '-70px' },
-                        }}
-                    >
+        <section className="w-full px-4 md:px-8 lg:px-12 py-10 poppins relative">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center md:max-w-7xl mx-auto">
+
+                {/* LEFT COLUMN - IMAGE */}
+                <div className="md:absolute md:col-span-6 flex justify-center md:justify-start z-10">
+                    <div className="md:absolute md:static -left-4 md:left-24 mt-[-16px] md:mt-3 w-full md:mb-40   overflow-hidden shadow-lg">
                         <img
-                            src="/images/image-264.png"
+                            src="/images/Rectangle-729.png"
                             alt="Ruchira working at her desk"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                display: "block",
-                            }}
+                            className="md:w-[374px] md:h-[446px] object-cover"
                         />
-                    </Box>
-                </Grid>
+                    </div>
+                </div>
 
-                {/* Right side - Text content */}
-                <Grid item xs={12} md={6} justifyContent="center">
-                    <Box
-                        sx={{
-                            height: "28.125rem",
-                            minHeight: { xs: "300px", md: "28.125rem" },
-                            background: "#383086",
-                            padding: { xs: 3, md: 4 },
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                            color: "white",
-                            maxWidth: "  53.0625rem ",
-                            ml: { xs: 0, md: 30 },
-                        }}
-                    >
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
-                            She recently spoke at a TEDx event on ‘how the knowledge of personality science can reduce divorces due to incompatibility’.
-                        </Typography>
+                {/* RIGHT COLUMN - TEXT */}
+                <div className="md:col-span-9 flex  justify-center md:absolute md:relative md:left-70">
+                    <div className="bg-[#383086] md:h-[449px] text-white p-6 md:p-10 md:pl-18 rounded-lg w-full h-auto md:h-[35.75rem] flex flex-col justify-center">
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                marginBottom: 4,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
-                            Ruchira has coached thousands of individuals across the world on the Science of Personalities and on the nuances of Parenting.
-                        </Typography>
+                        <p className="text-sm md:text-base leading-relaxed font-medium  md:ml-28 ">
+                            She recently spoke at a TEDx event on  ‘Show the knowledge of personality science can reduce divorces due to incompatibility’
+                        </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                marginBottom: 4,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
+                        <p className="text-sm md:text-base leading-relaxed font-medium mb-6 md:ml-28">
+                            Ruchira has coached thousands of individuals across the world on the Science of Personalities and on the nuances of Parenting.
+
+                        </p>
+
+                        <p className="text-sm md:text-base leading-relaxed font-medium mb-6 md:ml-28">
                             She has conducted In-Depth sessions on Personalities EO & YPO Forums in Nepal, Delhi, Pune, Coimbatore and Mumbai.
-                        </Typography>
+                        </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                marginBottom: 4,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
+                        <p className="text-sm md:text-base leading-relaxed font-medium md:ml-28 md:mb-5">
                             She has conducted workshops for teenagers on Identifying Personalities and on using the knowledge to carve out great relationships and to design work and study schedules.
-                        </Typography>
+                        </p>
 
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
-                            She conducted a workshop titled Understanding Others by BEing Yourself’ for Round Table, Gwalior.
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                fontSize: { xs: "14px", md: "16px" },
-                                lineHeight: 1.6,
-                                fontWeight: 500,
-                                fontFamily: "Poppins, sans-serif",
-                                ml: { xs: 0, md: 20 },
-                            }}
-                        >
-                            She has conducted sessions on the Secrets of BEing Happy.
-                        </Typography>
-                    </Box>
-                </Grid>
-            </Grid>
+                        <p className="text-sm md:text-base leading-relaxed font-medium md:ml-28">
+                            She conducted a workshop titled Understanding Others by BEing Yourself’ for Round Table, Gwalior.She has conducted sessions on the Secrets of Being Happy.
+                        </p>
+
+                        <p className="text-sm md:text-base leading-relaxed font-medium md:ml-28">
+                            She has conducted sessions on the Secrets of Being Happy.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
             {/* Personal Information Button */}
-            <button style={{
-                background: '#383086',
-                border: '2px solid white',
-                borderRadius: '20px',
-                color: '#f1cf87',
-                padding: '8px 20px',
-                fontSize: '15px',
-                fontWeight: '500',
-                fontFamily: 'Poppins, sans-serif',
-                cursor: 'pointer',
-                marginBottom: '16px',
-                textTransform: 'none',
-                transition: 'all 0.3s ease',
-                position: 'relative',
-                left: '5%',
-                top: '50px',
-            }}>
+            <button
+                className="bg-[#383086] md:mt-10 border-2 border-white rounded-[20px] text-[#f1cf87] px-5 py-2 text-[15px] font-medium poppins cursor-pointer mb-4 transition-all duration-300 ease-in-out relative left-[5%] top-[50px]"
+            >
                 Personal Information
             </button>
 
             {/* Personal Information Paragraph */}
-            <p style={{
-                margin: '0',
-                fontSize: '14px',
-                color: '#333',
-                background: 'white',
-                padding: '16px',
-                borderRadius: '8px',
-                marginTop: '16px',
-                fontWeight: '500',
-                fontFamily: 'Poppins, sans-serif',
-                position: 'relative',
-                left: '5%',
-                top: '20px',
-            }}>
+            <p
+                className="m-0 text-sm text-[#333] bg-white p-4 rounded-lg mt-4 font-medium poppins relative left-[5%] top-[20px]"
+            >
                 Married to Karan Darda, Executive Director of the Lokmat Media Group 2 children, Aryaveer and Adhiraj.
             </p>
-        </Box>
-    )
-}
+        </section>
+    );
+};
 
-export default CoachingSection
+export default CoachingSection;

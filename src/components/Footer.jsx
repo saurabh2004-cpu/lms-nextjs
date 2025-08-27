@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#383086] text-white py-16 px-6">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:justify-between">
           {/* Brand and Links Section */}
-          <div className="font-light poppins text-base align-center">
+          <div className="font-light poppins text-base align-center ">
             <div className="mb-6">
-              <img src="/logo/RD_logo__1_-removebg-preview 1.png" alt="Ruchira Darda" className="h-25 w-50" />
+              <img src="/logo/RD_logo__1_-removebg-preview 1.png" alt="Ruchira Darda" className="h-25 w-50 relative right-6 md:right-0" />
             </div>
 
             <div className="mb-6 ml-2 font-light poppins ">
