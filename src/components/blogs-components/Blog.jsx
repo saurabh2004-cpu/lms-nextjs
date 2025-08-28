@@ -168,37 +168,40 @@ export default function Blog() {
             ))}
 
             {/* Pagination */}
-            <motion.div className="flex justify-center items-center space-x-4 py-8" variants={fadeInUp}>
-              
-
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => handlePageChange(index + 1)}
-                  className={`w-10 h-10 rounded-lg poppins font-medium transition-colors duration-200 ${
-                    currentPage === index + 1
-                      ? "bg-[#383086] text-white"
-                      : "text-[#383086] hover:bg-[#383086] hover:text-white"
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-
+            {/* Pagination */}
+            <div className="flex justify-center items-center gap-2 mt-8 md:mt-12">
+              <button
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg bg-[#383086] text-white font-semibold text-xs md:text-sm hover:opacity-90 transition-opacity duration-200"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                1
+              </button>
+              <button
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg bg-gray-200 text-gray-600 font-semibold text-xs md:text-sm hover:bg-gray-300 transition-colors duration-200"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                2
+              </button>
+              <span className="text-gray-400 px-1 md:px-2 font-medium">...</span>
+              <button
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg bg-gray-200 text-gray-600 font-semibold text-xs md:text-sm hover:bg-gray-300 transition-colors duration-200"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                30
+              </button>
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className={`px-4 flex justify-center items-center py-2 border border-[#383086] border-solid relative md:left-70  poppins font-medium transition-colors duration-200 ${
-                  currentPage === totalPages
-                    ? "text-gray-400 cursor-not-allowed"
-                    : "text-[#383086] hover:bg-[#383086] hover:text-white"
-                }`}
+                className={`px-4 flex justify-center items-center py-2 border border-[#383086] border-solid relative md:left-70  poppins font-medium transition-colors duration-200 ${currentPage === totalPages
+                  ? "text-gray-400 cursor-not-allowed"
+                  : "text-[#383086] hover:bg-[#383086] hover:text-white"
+                  }`}
               >
 
                 Next
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Sidebar */}
